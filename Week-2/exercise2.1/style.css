@@ -2,7 +2,16 @@ html,
 body {
 	width: 100%;
 	height: 100%;
+    counter-reset: h3;
     
+}
+.question{
+	margin-left: 503px;
+    margin-top: 73px;
+}
+h3::before{
+	counter-increment: h3;
+    content: counter(h3)"." " ";
 }
 
 div#main {
