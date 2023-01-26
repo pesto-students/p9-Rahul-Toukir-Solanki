@@ -14,3 +14,10 @@ let fullName = function(state,fun){
 var call = fullName.call(form,"Raipur", "Call");
 console.log(call);
 
+//using Apply function
+let apply  = fullName.apply(form, ["raipur", "Apply"])
+console.log(apply);
+
+//using Bind function
+let bind = fullName.bind(form,"Raipur", "Bind");
+console.log(bind);
