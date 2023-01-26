@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    counter-reset: h2;
+}
+img{
+    width: 500px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+.title-head{
+    text-align: center;
+}
+
+h2::before{
+    counter-increment: h2;
+    content: counter(h2) " ";
+}
+h2::selection{
+    background: yellow; 
+}
+
+a {
+    color: #00f;
+}
+
+header {
+    background-color: #eee;
+    padding: 20px;
+}
+
+#articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+article {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+form {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="terms-and-conditions"],
+input[type="number"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="terms-and-conditions"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+}
+
+button.submit-btn {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #articles {
+        grid-template-columns: 1fr;
+    }
+}
