@@ -4,7 +4,8 @@ const memoize = (fun) => {
     if (n in cache) {
       return cache[n];
     }
-    return (cache[n] = n * n);
+    cache[n] = fun(n)
+    return cache[n];
   };
 };
 
